@@ -38,7 +38,7 @@ const applyAppOverrides = apps =>
 // Filter out apps without UI and add an app source url properties
 const prepareFrontendApps = (apps, gateway) => {
   return applyAppOverrides(apps)
-    .filter(app => app && app['start_url'])
+    //.filter(app => app && app['start_url'])
     .sort(sortAppsPair)
     .map(app => {
       const baseUrl = appBaseUrl(app, gateway)
